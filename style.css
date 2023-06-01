@@ -1,0 +1,535 @@
+:root {
+  --primary: #dbb311;
+  --bg: rgb(23, 22, 22);
+  --cl: #f8f3f31f;
+  --clr: rgb(34, 32, 32);
+  --wht: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.icon {
+  /* fill: var(--primary); */
+  color: white;
+}
+
+.fill {
+  color: black;
+  fill: var(--primary);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--wht);
+  overflow-x: hidden;
+}
+
+/* nav */
+
+.menu,
+.close {
+  position: absolute;
+  right: -5000px;
+}
+.menu,
+.close {
+  text-align: center;
+  background-color: var(--cl);
+  width: max-content;
+  height: max-content;
+  text-decoration: none;
+  color: var(--wht);
+}
+nav {
+  width: 25%;
+  height: 100vh;
+  background-color: var(--clr);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  float: left;
+  transition: 1s;
+  z-index: 999;
+}
+
+nav .box-profile {
+  text-align: center;
+  margin-top: 2rem;
+}
+nav .box-profile img {
+  border: 6px solid var(--primary);
+  border-radius: 50%;
+}
+
+nav ul {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1rem;
+}
+nav ul li {
+  text-align: center;
+}
+nav ul li a {
+  width: 100%;
+  background-color: var(--cl);
+  padding: 0.5rem 5rem;
+  border-radius: 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--wht);
+}
+nav ul li a:hover {
+  background-color: var(--primary);
+}
+
+/* home */
+.home {
+  /* margin-left: 300px; */
+  padding: 10% 10rem;
+  float: right;
+  width: 75%;
+}
+
+.home h4 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.home h2,
+.about h2,
+.education h2,
+.portofolio h2,
+.contact h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.home h2 span,
+.about h2 span,
+.education h2 span,
+.portofolio h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.home button {
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  width: max-content;
+  background-color: var(--cl);
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  color: var(--wht);
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.btn-primary .icon {
+  height: 17px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary);
+}
+.btn-primary:hover .icon {
+  color: black;
+}
+
+.a {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+/* about*/
+
+.about,
+.education,
+.portofolio,
+.contact {
+  padding: 8% 1rem;
+  float: right;
+  width: 75%;
+  text-align: center;
+}
+.about h2,
+.education h2,
+.portofolio h2,
+.contact h2 {
+  margin: 0 auto;
+  width: 90%;
+  border-bottom: 1px solid var(--cl);
+}
+.about .row,
+.education .row,
+.portofolio .row,
+.contact .row {
+  width: 100%;
+  padding: 5% 2rem;
+  display: flex;
+}
+
+.about .row .profile {
+  width: 50%;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+}
+.about .row .profile span {
+  color: var(--primary);
+}
+.about .row .profile button {
+  margin-top: 2rem;
+}
+
+.about .row .profile-2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .row .profile-2 div {
+  width: 180px;
+  height: 120px;
+  text-align: center;
+  background-color: var(--cl);
+  padding: 10px;
+  /* font-weight: 500; */
+}
+
+.about .row .profile-2 span {
+  color: var(--primary);
+  font-size: 2rem;
+}
+.about .row .profile-2 p {
+  font-size: 1.2rem;
+}
+
+/*education  */
+.education .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 6rem;
+}
+.education .card {
+  display: flex;
+  width: 200px;
+  font-size: 0.7rem;
+}
+.education .card .toga-img {
+  display: inline-block;
+  border-radius: 50%;
+  height: 40px;
+  background-color: var(--primary);
+  position: relative;
+}
+.education .card img {
+  width: 40px;
+}
+.education .card .toga-img::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -40px;
+  transform: rotate(90deg) translateX(60px);
+  display: inline-block;
+  width: 120px;
+  border-bottom: 1px solid white;
+}
+
+.education .content {
+  display: flex;
+  flex-direction: column;
+}
+.education .content span {
+  width: max-content;
+  margin: 0 1rem 0.5rem;
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
+  background-color: var(--cl);
+}
+
+.education .content h3 {
+  font-size: 0.9rem;
+}
+
+.education .content p {
+  margin-top: 0.5rem;
+  text-align: left;
+  font-size: 0.7rem;
+}
+
+/* portofolio */
+
+.portofolio .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.portofolio .row .card {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.portofolio .row .card img {
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.portofolio .row .card img:hover {
+  transform: scale(1.2);
+}
+
+/* contact */
+
+.contact .row {
+  display: flex;
+}
+
+.contact .row .contact-info {
+  text-align: left;
+  line-height: 3rem;
+  width: 50%;
+}
+
+.contact .row .contact-info p .icon {
+  position: relative;
+  top: 5px;
+}
+
+.contact .row .form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact .row .form input {
+  padding: 1rem 3rem;
+  background-color: var(--cl);
+  border-radius: 15px;
+  font-size: 1.1rem;
+  color: var(--wht);
+}
+
+.contact .row .form input:nth-child(3) {
+  width: 100%;
+  height: 100px;
+}
+
+/* footer */
+.footer {
+  padding: 1rem 1rem;
+  float: right;
+  width: 75%;
+  text-align: center;
+  background-color: var(--primary);
+}
+
+.footer .link-socials,
+.footer .links {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.footer .link-socials a,
+.links a {
+  text-decoration: none;
+  color: black;
+}
+
+.links a:hover {
+  border-bottom: 1px solid black;
+}
+.footer .links {
+  margin: 2rem 0;
+}
+
+/* arrow up */
+.up{
+    position:fixed;
+    right: 1rem;
+    bottom: 5rem;
+    background-color: var(--primary);
+    opacity: .7;
+}
+
+.up a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+/* clear */
+.clear {
+  clear: both;
+}
+
+/* media query */
+
+/* tablet */
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 80%;
+  }
+
+  .menu {
+    right: 1rem;
+    top: 1rem;
+    position: fixed;
+  }
+
+  nav {
+    width: 100%;
+    position: absolute;
+    left: -1000px;
+    float: none;
+    transition: 0.4s;
+  }
+
+  nav.active {
+    position: fixed;
+    left: 0;
+  }
+
+  .close {
+    right: 1rem;
+    top: 1rem;
+  }
+
+  /* home */
+  .home,
+  .education,
+  .portofolio,
+  .contact {
+    padding: 10rem 2rem;
+    width: 100%;
+    float: none;
+  }
+
+  .home {
+    padding-left: 3rem;
+  }
+  /* about */
+
+  .about {
+    width: 100%;
+  }
+
+  .portofolio .row .card img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer {
+    width: 100%;
+  }
+
+  .footer .link-socials,
+  .footer .links {
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+/* hp */
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 70%;
+  }
+  .about {
+    float: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about .row,
+  .about .row .profile,
+  .about .row .profile-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+  .about .row .profile-2 {
+    margin-top: 2rem;
+  }
+
+  .about .row .profile-2 div {
+    width: 100%;
+    height: 90px;
+  }
+
+  .education {
+    float: none;
+    width: 100%;
+  }
+
+  .education .content span,
+  .education .content h3,
+  .education .content p {
+    font-size: 1rem;
+  }
+
+  .portofolio .row {
+    width: 100%;
+    padding: 1rem;
+  }
+  .portofolio .row .card img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .contact .row {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact .row .contact-info {
+    width: 100%;
+  }
+
+  .contact .row .form {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
