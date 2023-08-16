@@ -332,7 +332,7 @@ nav ul li a:hover {
 }
 
 .contact .row .form input ,
-.contact .row .form textarea {
+.contact .row .form #message {
   padding: 1rem ;
   background-color: var(--cl);
   border-radius: 15px;
@@ -340,9 +340,9 @@ nav ul li a:hover {
   color: var(--wht);
 }
 
-.contact .row .form textarea {
+/* .contact .row .form textarea {
   letter-spacing: 0;
-}
+} */
 
 /* .contact .row .form input:nth-child(3) {
   width: 100%;
